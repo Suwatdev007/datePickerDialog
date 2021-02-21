@@ -237,11 +237,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
   void _changeYearSelection(int index) {
     int year = _yearRange.first + index;
     if (_currYear != year) {
-       if(widget.locale.toString()=='DateTimePickerLocale.th'){
-        _currYear = _currYear+543;
-      }else{
         _currYear = year;
-      }
       _changeDateRange();
       _onSelectedChange();
     }
