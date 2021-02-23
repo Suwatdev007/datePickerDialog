@@ -53,9 +53,11 @@ packages:
   datepicker:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "89973171c7b43789b3e2516c4ba944c4ed45baeb"
+      url: "https://github.com/Suwatdev007/datePickerDialog"
+    source: git
     version: "0.0.1"
   fake_async:
     dependency: transitive

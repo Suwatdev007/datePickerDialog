@@ -33,7 +33,6 @@ class DatePickerTitleWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           _renderCancelWidget(context),
-          SizedBox(width: 15,),
           _renderConfirmWidget(context),
         ],
       ),
@@ -62,15 +61,12 @@ class DatePickerTitleWidget extends StatelessWidget {
       );
     }
 
-    return Flexible(
-      flex: 1,
-      child: Container(
-        height: pickerTheme.titleHeight,
-        child: FlatButton(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          child: cancelWidget,
-          onPressed: () => this.onCancel(),
-        ),
+    return Container(
+      height: pickerTheme.titleHeight,
+      child: FlatButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        child: cancelWidget,
+        onPressed: () => this.onCancel(),
       ),
     );
   }
@@ -97,15 +93,14 @@ class DatePickerTitleWidget extends StatelessWidget {
       );
     }
 
-    return Flexible(
-      flex: 1,
-      child: Container(
-        height: pickerTheme.titleHeight,
-        child: FlatButton(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          child: confirmWidget,
-          onPressed: () => this.onConfirm(),
-        ),
+    return Container(
+      height: pickerTheme.titleHeight,
+      width: 200,
+      child: FlatButton(
+        color: Colors.red,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+        child: confirmWidget,
+        onPressed: () => this.onConfirm(),
       ),
     );
   }

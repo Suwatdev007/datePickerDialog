@@ -12,8 +12,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
+#  datepicker:
+#    path: ../
   datepicker:
-    path: ../
+    git:
+      url: https://github.com/Suwatdev007/datePickerDialog
 
 dev_dependencies:
   flutter_test:

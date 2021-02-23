@@ -33,18 +33,17 @@ class _DatePickerInPageState extends State<DatePickerInPage> {
       dateFormat: DATE_FORMAT,
       pickerTheme: DateTimePickerTheme(
         backgroundColor: Colors.white,
-        cancelTextStyle: TextStyle(color: Colors.white),
-        confirmTextStyle: TextStyle(color: Colors.black),
         itemTextStyle: TextStyle(color: Colors.deepOrange),
         showTitle: true,
-        confirm: FlatButton(minWidth:  double.maxFinite,color: Colors.deepOrange, onPressed: () {  }, child: Text('ตกลง',style: TextStyle(color: Colors.white),),),
-        cancel: FlatButton(minWidth:  double.maxFinite,onPressed: () {  }, child: Text('ยกเลิก'),),
+        confirm: Container(width:  double.maxFinite,child:  Center(child: Text('ตกลง',style: TextStyle(color: Colors.black),))),
+        cancel: Container(width:  double.maxFinite,child: Center(child: Text('ตกลง',style: TextStyle(color: Colors.white),),),),
         pickerHeight: 250,
         itemHeight: 30.0,
       ),
       onChange: (dateTime, selectedIndex) {
         setState(() {
           _dateTime = dateTime;
+          print(dateTime);
         });
       },
     );
