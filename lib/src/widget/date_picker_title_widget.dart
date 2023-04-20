@@ -63,7 +63,7 @@ class DatePickerTitleWidget extends StatelessWidget {
 
     return Container(
       height: pickerTheme.titleHeight,
-      child: FlatButton(
+      child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         child: cancelWidget,
         onPressed: () => this.onCancel(),
@@ -96,7 +96,7 @@ class DatePickerTitleWidget extends StatelessWidget {
     return Container(
       height: pickerTheme.titleHeight,
       width: 200,
-      child: FlatButton(
+      child: MaterialButton(
         color: Colors.red,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
         child: confirmWidget,
